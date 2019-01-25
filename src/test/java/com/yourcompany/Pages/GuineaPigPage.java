@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class GuineaPigPage {
 
+    public Object followLink;
     @FindBy(linkText = "i am a link")
     private WebElement theActiveLink;
 
@@ -22,7 +23,7 @@ public class GuineaPigPage {
     private WebElement submitButton;
 
     public WebDriver driver;
-    public static String url = "git";
+    public static String url = "https://saucelabs-sample-test-frameworks.github.io/training-test-page/";
 
     public static GuineaPigPage visitPage(WebDriver driver) {
         GuineaPigPage page = new GuineaPigPage(driver);
@@ -36,7 +37,7 @@ public class GuineaPigPage {
     }
 
     public void visitPage() {
-        this.driver.get(url);
+        this.driver.get(URL);
     }
 
     public void followLink() {

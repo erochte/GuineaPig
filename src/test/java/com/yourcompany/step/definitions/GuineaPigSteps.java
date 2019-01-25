@@ -1,5 +1,6 @@
 package com.yourcompany.step.definitions;
 
+import com.yourcompany.Pages.GuineaPigPage;
 import com.yourcompany.utils.SauceUtils;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -7,21 +8,16 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.io.*;
-import java.util.concurrent.TimeUnit;
 import java.net.URL;
 import java.util.UUID;
-import static org.junit.Assert.*;
-
-
-import com.yourcompany.Pages.*;
 
 import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertThat;
 
 public class GuineaPigSteps {
 
