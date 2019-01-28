@@ -5,7 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentInElement;
 
 public class GuineaPigPage {
 
@@ -50,7 +51,7 @@ public class GuineaPigPage {
 
         // Race condition for time to populate yourCommentsSpan
         WebDriverWait wait = new WebDriverWait(this.driver, 15);
-        wait.until(ExpectedConditions.textToBePresentInElement(yourCommentsSpan, text));
+        wait.until(textToBePresentInElement(yourCommentsSpan, text));
     }
 
     public String getSubmittedCommentText() {
