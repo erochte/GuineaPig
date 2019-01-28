@@ -37,7 +37,7 @@ public class GuineaPigPage {
     }
 
     public void visitPage() {
-        this.driver.get(URL);
+        this.driver.get("https://saucelabs-sample-test-frameworks.github.io/training-test-page/");
     }
 
     public void followLink() {
