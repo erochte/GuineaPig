@@ -14,8 +14,6 @@ public class GuineaPigPage {
     @FindBy(how= How.XPATH,using = "//a[text()='test-page2/']/@href")
     public WebElement followLink;
 
-
-
     @FindBy(id = "your_comments")
     private WebElement yourCommentsSpan;
 

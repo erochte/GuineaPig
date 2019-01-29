@@ -10,7 +10,7 @@ public class GuineaPigSteps {
     private GuineaPigActions GuineaPigActions = new GuineaPigActions();
 
     @When("^I click on the link$")
-    public void user_click_on_the_link() throws Exception {
+    public void iClickOnTheLink() {
         GuineaPigActions.clickFollowLink();
     }
 
