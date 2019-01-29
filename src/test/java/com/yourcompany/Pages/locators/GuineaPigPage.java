@@ -1,8 +1,9 @@
-package com.yourcompany.Pages;
+package com.yourcompany.Pages.locators;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -10,9 +11,8 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentI
 
 public class GuineaPigPage {
 
-    public Object followLink;
-    @FindBy(linkText = "i am a link")
-    private WebElement theActiveLink;
+    @FindBy(how= How.XPATH,using = "//a[text()='test-page2/']/@href")
+    public WebElement followLink;
 
     @FindBy(id = "your_comments")
     private WebElement yourCommentsSpan;
@@ -25,6 +25,10 @@ public class GuineaPigPage {
 
     public WebDriver driver;
     public static String url = "https://saucelabs-sample-test-frameworks.github.io/training-test-page/";
+
+    public GuineaPigPage() {
+
+    }
 
     public static GuineaPigPage visitPage(WebDriver driver) {
         GuineaPigPage page = new GuineaPigPage(driver);
@@ -39,10 +43,6 @@ public class GuineaPigPage {
 
     public void visitPage() {
         this.driver.get("https://saucelabs-sample-test-frameworks.github.io/training-test-page/");
-    }
-
-    public void followLink() {
-        this.theActiveLink.click();
     }
 
     public void submitComment(String text) {
@@ -63,4 +63,6 @@ public class GuineaPigPage {
         return this.driver.getTitle() == title;
     }
 
+    public void followLink() {
+    }
 }
