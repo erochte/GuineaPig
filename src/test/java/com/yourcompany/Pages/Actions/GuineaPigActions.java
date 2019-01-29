@@ -6,7 +6,9 @@ import com.yourcompany.utils.SeleniumDriver;
 
 import static org.openqa.selenium.support.PageFactory.initElements;
 
+
 public class GuineaPigActions {
+
     private GuineaPigPage GuineaPigPage = new GuineaPigPage();
 
 public GuineaPigActions(){
@@ -16,5 +18,7 @@ public GuineaPigActions(){
     public void clickFollowLink() {
         GuineaPigPage.followLink.click();
     }
+
+
 }
 
